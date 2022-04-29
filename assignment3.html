@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <meta name="description" content="Assignment 3">
+    <meta name="keywords" content="Assignment 3, flexbox, grids">
+    <meta name="author" content="Angela Efremova">
+    <link rel="shortcut icon" href="assets/images/angie.ico">
+    <link href="./assets/css/main2.css" rel="stylesheet">
+    <link href="./assets/css/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#application_form">Application Form</a></li>
+                    <li><a href="#html_videos">HTML5 Videos</a></li>
+                    <li><a href="#form_elements">Form Elements</a></li>
+                    <li><a href="#tutorial">5 Minute Video Tutorial</a></li>
+                    <li><a href="#image_map">Image Mapping</a></li>
+                </ul>
+            </nav>
+        </header>
+<main>
+    <!--Add a background image to cover this module 
+        Start with a greeting and an introduction about what this page contains. 
+        Add a link to your video tutorial on the current page.-->
+    <div id="introduction">
+        <h1>Welcome!</h1>
+            <div id="introtext">
+                <p>This website contains an application form, videos, form elements, a tutorial on HTML5 and an image map!</p>
+                <p>Click <a href="#tutorial">here</a> to watch my tutorial on Image Mapping</p>  
+            </div>
+    </div>
+
+    <div id="application_form">
+        <h1>Application Form</h1>
+            <form action="#application_form">
+                <fieldset>
+                    <legend>Application Form</legend>
+                        <p><!--Full name - cannot be empty-->
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname" size="20" required>
+                        </p>
+                        <p><!--Email - cannot be empty and must be a valid email address.-->
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" size="20" placeholder="example@email.com" required>
+                        </p>
+                        <p><!--Gender - optional-->
+                            <label>Gender:</label>
+                            <input type="radio" name="gender" value="female">Female
+                            <input type="radio" name="gender" value="male">Male
+                            <input type="radio" name="gender" value="other">Other
+                        <p>
+                        <p><!--Skills - optional-->
+                            <label>Skills:</label>
+                            <input type="checkbox" name="skill1" value="html">HTML
+                            <input type="checkbox" name="skill2" value="css">CSS
+                            <input type="checkbox" name="skill3" value="Java">Java
+                            <input type="checkbox" name="skill4" value="Python">Python
+                        </p>    
+                        <p><!--Post applying for - one must be selected-->
+                            <label>Post Applying For:</label>            
+                            <input type="radio" name="position" value="backend" required>Back-end Developer
+                            <input type="radio" name="position" value="frontend" required>Front-end Developer
+                            <input type="radio" name="position" value="manager" required>Manager
+                        </p>
+                        <p><!--Upload Resume - Accept only MS Word or PDF file--> 
+                            <label for="upload-resume">Upload Resume:</label>    
+                            <input type="file" id="upload-resume" name="upload-resume" accept=".doc, .pdf, .docx">
+                        </p>   
+                        <p><!--Paste your resume - optional-->
+                            <label for="paste-resume">Paste Resume:</label>
+                            <textarea id="paste-resume" name="paste-resume" rows="4" cols="30">Paste Resume Here...</textarea>
+                        </p> 
+                        <p><!--Notify me of the status via email optional-->
+                            <label>Notify me the status via email.</label>    
+                            <input type="radio" name="notify" value="notify">
+                        </p>  
+                        <p><!--I agree to terms & conditions must be selected.-->
+                            <label>I agree to the terms and conditions.</label>
+                            <input type="radio" name="agree" value="agree" required>
+                        </p>
+                        <p>
+                            <input type="submit" value="Submit">
+                            <button type="reset">Reset</button>
+                        </p>
+                    </div> 
+                </fieldset>
+            </form>
+    </div>
+
+    <!--For this module, you must use the flexbox or gird to add three or more videos related to your hobbies. 
+        Each video must have a title and a short description.
+        You are required to use an HTML5 video tag.
+        Download free videos from https://www.pexels.com/search/videos.-->
+    <div id="html_videos">
+        <div id="hobbies_title"><h1>My Hobbies</h1></div>
+            <div id="vid1">
+                <video controls>
+                    <source src="./assets/images/programming.mp4">
+                </video> 
+                    <h4>Programming</h4>
+                    <p>I started programming in elementry school but I only got serious about it the past year.</p>
+                    <p>Video by cottonbro from Pexels</p>
+            </div>
+            <div id="vid2">
+                <video controls>
+                    <source src="./assets/images/yoga.mp4">
+                </video>    
+                    <h4>Yoga</h4>
+                    <p>In the begining of 2020 I began taking hot yoga classes, now with covid I have not been able to attend.</p>
+                    <p>Video by Taryn Elliott from Pexels</p> 
+            </div>
+            <div id="vid3">
+                <video controls>
+                    <source src="./assets/images/travelling.mp4">
+                </video>   
+                    <h4>Travelling</h4>
+                    <p>Travelling has and always be what makes me happiest. I plan on travelling as much as possible in life.</p>
+                    <p>Video by Jess Vide from Pexels</p> 
+            </div>
+    </div>
+
+    <div id="form_elements">
+        <h1>HTML5 Form Elements</h1>
+            <form action="#form_elements">
+                <fieldset>
+                    <legend>HTML5 Form Elements</legend>
+                        <p><!---Title - cannot be empty (for label use placeholder)-->
+                                <label for="fullname">Title:</label>
+                                <input type="text" id="title" name="title" placeholder="Title" size="20" required>
+                        </p>
+                        <p><!--Name - cannot be empty and cannot contain digits.-->
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" placeholder="Name" size="20" pattern="[A-Za-z]+" required>
+                        </p>
+                        <p><!--Phone number - Option if entered all character must be digits-->
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" pattern="[^A-Za-z]+">
+                        </p>
+                        <p><!--Your Web site - optional-->
+                                <label>Your Website:</label>
+                                <input type="url" id="website" name="website" placeholder="Website URL">
+                        </p>
+                        <p><!--Nr. of item to order - one option from 1 to 10 must be selected-->
+                                <label for="num">No. of Items to Order:</label>
+                                <input type="number" id="num" name="num" min="1" max="10" required>
+                        </p>
+                        <p><!--Length - Must be selected max value 1m in 10cm increments-->
+                                <label>Length:</label>
+                                <input type="range" name=length value="0" min="10" max="100" step="10" oninput="this.nextElementSibling.value = this.value">
+                                <output>0</output>
+                                cm
+                        </p>
+                        <p><!--Delivery date - must be selected cannot be before December 16 2020-->
+                                <label for="deliveryday">Delivery Day:</label>
+                                <input type="date" id="deliveryday" name="deliveryday" min="2020-12-16" required>
+                        </p>
+                        <p><!--Time of delivery - must be selected in 30 minutes increments-->
+                                <label>Time of Delivery:</label>
+                                <input type="time" id="time" name="time" step="1800" required>
+                        </p>
+                        <p><!--Colour of the item - default value must be read-->
+                                <label for="colour">Colour of Item:</label>
+                                <input type="color" id="colour" name="colour" value="#ff0000">
+                        </p>
+                        <p><!--A custom image for a submit button (use input type)-->
+                                <input id="submit" type="image" src="./assets/images/submit.png" alt="submit">
+                        </p>
+                        <p><!--A custom image for a reset button (use button tag)-->
+                                <button type="reset"><img src="./assets/images/reset.png" alt="refresh" ></button>
+                        </p>
+                </fieldset>
+            </form>    
+    </div>
+
+    <!--You must create the tutorial video.
+        The video must cover one of the topics from the second half - check the course outline.
+        Your video must be easy to follow and learn the topic you cover
+        Your tutorial video must contain a coding example - not just talking or showing some else's work.
+        The length of your video should >= five minutes.
+        You may host your video on YouTube or a similar platform. But the video should be embedded in your page.-->
+    <div id="tutorial">
+        <h1>How To</h1>
+            <div id="myvid">
+                <iframe 
+                    src="https://www.youtube.com/embed/fQUBLqTX59A" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+    </div>
+    
+    <!--All areas must have a proper title, and when it is clicked, a related document should be open in a new window. 
+        Must map and link all three shapes (Rectangle, Circle and Polygon)-->
+    <div id="image_map">
+        <h1>Image Map</h1>
+            <div id="flowers">
+                <img src="./assets/images/flower.jpg" alt="Flowers" usemap="#flower_types">
+                    <map name="flower_types">
+                        <area href="https://en.wikipedia.org/wiki/Hyacinth_(plant)" target="_blank" alt="Hyacinth" shape="rect" coords="61,390,160,622" >
+                        <area href="https://www.freshflowers.com.au/blog/post/lily-flower-colour-meaning-and-symbolism.html" target="_blank" alt="Yellow Lily" shape="rect" coords="185,308,269,654" >
+                        <area href="https://en.wikipedia.org/wiki/Iris_(plant)" target="_blank" alt="Iris" shape="poly" coords="209,89,442,215,318,303,175,222" >
+                        <area href="https://en.wikipedia.org/wiki/Bellis_perennis" target="_blank" alt="Daisy" shape="circle" coords="100,308,95" >
+                        <area href="https://en.wikipedia.org/wiki/Taraxacum" target="_blank" alt="Dandelion" coords="438,577,42" shape="circle">
+                        <area href="https://en.wikipedia.org/wiki/Cherry_blossom"target="_blank" alt="Cherry Blossom" shape="poly" coords="281,366,326,314,360,288,414,298,472,535,433,522,433,435,399,380,384,396,412,474,387,629,328,621,310,532,340,516">
+                    </map>
+            </div>
+    </div>
+</main>
+<footer><!--Footer contains validation script-->
+     <script src="https://my.gblearn.com/js/loadscript.js"></script>
+</footer>
+</div>
+</body>
+</html>
